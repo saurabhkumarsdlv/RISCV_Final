@@ -120,16 +120,6 @@ Potential improvements to the current design include:
 
 ---
 
-## Project Structure
-├── src/ # Verilog source files
-├── testbench/ # Simulation testbenches
-├── constraints/ # FPGA constraint files
-├── results/ # Simulation outputs and waveforms
-├── docs/ # Project documentation and report
-
-
----
-
 ## Author
 
 Saurabh Kumar  
