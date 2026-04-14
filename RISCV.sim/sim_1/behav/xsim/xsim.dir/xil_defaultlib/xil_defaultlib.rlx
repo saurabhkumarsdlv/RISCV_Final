@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sim_1/new/RISCV_tb.v,1743010507,verilog,,,,stimulus,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/ALU.v,1743009480,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/CONTROL.v,,ALU,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/CONTROL.v,1743009857,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/Datapath.v,,CONTROL,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/Datapath.v,1743010414,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/IFU.v,,DATAPATH,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/IFU.v,1743010321,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/INST_MEM.v,,IFU,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/INST_MEM.v,1743009919,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/PROCESSOR.v,,INST_MEM,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/PROCESSOR.v,1743010313,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/REG_FILE.v,,PROCESSOR,,,,,,,,
+C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sources_1/new/REG_FILE.v,1743009931,verilog,,C:/Users/saura/Desktop/PROJECTS/RISCV/RISCV.srcs/sim_1/new/RISCV_tb.v,,REG_FILE,,,,,,,,
