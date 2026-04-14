@@ -1,0 +1,59 @@
+/*
+Immediate Generator for RV32I processor
+Extracts and sign-extends immediate values from different instruction formats:
+- I-type: used in loads, ALU immediate operations, JALR
+- S-type: used in stores
+- B-type: used in branches
+- U-type: used in LUI, AUIPC
+- J-type: used in JAL
+*/
+
+module IMMEDIATE_GEN(
+    input [31:0] instruction,
+    input [2:0] imm_type,  // Selects immediate format
+    output reg [31:0] immediate
+);
+    parameter I_TYPE = 3'b000;
+    parameter S_TYPE = 3'b001;
+    parameter B_TYPE = 3'b010;
+    parameter U_TYPE = 3'b011;
+    parameter J_TYPE = 3'b100;
+    
+    wire [6:0] opcode;
+    assign opcode = instruction[6:0];
+    
+    always @(*) begin
+        case (imm_type)
+            I_TYPE: begin
+                // I-type: immediate[11:0] = inst[31:20]
+                immediate = {{20{instruction[31]}}, instruction[31:20]};
+            end
+            
+            S_TYPE: begin
+                // S-type: immediate[11:0] = {inst[31:25], inst[11:7]}
+                immediate = {{20{instruction[31]}}, instruction[31:25], instruction[11:7]};
+            end
+            
+            B_TYPE: begin
+                // B-type: immediate[12:0] = {inst[31], inst[7], inst[30:25], inst[11:8], 1'b0}
+                immediate = {{19{instruction[31]}}, instruction[31], instruction[7], 
+                             instruction[30:25], instruction[11:8], 1'b0};
+            end
+            
+            U_TYPE: begin
+                // U-type: immediate[31:0] = {inst[31:12], 12'b0}
+                immediate = {instruction[31:12], 12'b0};
+            end
+            
+            J_TYPE: begin
+                // J-type: immediate[20:0] = {inst[31], inst[19:12], inst[20], inst[30:21], 1'b0}
+                immediate = {{11{instruction[31]}}, instruction[31], instruction[19:12], 
+                             instruction[20], instruction[30:21], 1'b0};
+            end
+            
+            default: begin
+                immediate = 32'h0;
+            end
+        endcase
+    end
+endmodule
